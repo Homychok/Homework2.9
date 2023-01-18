@@ -7,13 +7,13 @@ public class Number {
         this.number = number;
     }
 
-    public Long getNumber() {
+    public Double getNumber() {
         return number;
     }
 
-    public void setNumber(Double number) {
-        this.number = number;
-    }
+//    public void setNumber(Double number) {
+//        this.number = number;
+//    }
 
     @Override
     public String toString() {

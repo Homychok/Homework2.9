@@ -27,9 +27,9 @@ public class Task2 {
         for (Human person : humanList) {
             System.out.println(person.getName() + " - " + person.getGreeting());
         }
-
-        Consumer<Human> consumer2 = (person) -> System.out.println(person.getName() + " - " + person.getGreeting());
         System.out.println("_________________");
+
+        Consumer<Human> consumer2 = person -> System.out.println(person.getName() + " - " + person.getGreeting());
         for (Human person : humanList) {
             System.out.println(person.getName() + " - " + person.getGreeting());
         }
