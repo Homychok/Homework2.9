@@ -7,8 +7,8 @@ public class Task5 {
     public static void main(String[] args) {
         Integer x = (int) (Math.random() * 101);
         Predicate<Integer> predicate = integer -> integer >= 0;
-        Function<Integer, String> function1 = integer -> integer + "положительное";
-        Function<Integer, String> function2 = integer -> integer + "отрицательнок";
+        Function<Integer, String> function1 = integer -> integer + " положительное";
+        Function<Integer, String> function2 = integer -> integer + " отрицательнок";
         if (predicate.test(x)) {
             System.out.println(function1.apply(x));
         } else {
@@ -20,11 +20,11 @@ public class Task5 {
             Predicate<? super T> condition,
             Function<? super T, ? extends U> ifTrue,
             Function<? super T, ? extends U> ifFalse) {
-        return (T, x) -> {
-            if (condition.test(x)) {
-                return ifTrue;
+        return (T) -> {
+            if (condition.test(T)) {
+                return (U) ifTrue;
             } else {
-                return ifFalse;
+                return (U) ifFalse;
             }
         };
     }
